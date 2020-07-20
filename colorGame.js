@@ -1,4 +1,5 @@
-let colors = generateRandomColors(9);
+let numSquares = 9;
+let colors = generateRandomColors(numSquares);
 
 let squares = document.querySelectorAll(".square");
 let rgbText = document.querySelector("#rgb");
@@ -38,7 +39,7 @@ resetButton.addEventListener("click", function() {
 	messageText.textContent = "";
 	this.textContent = "New Colors";
 
-	colors = generateRandomColors(9);
+	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
 	rgbText.textContent = pickedColor;
 
@@ -64,6 +65,7 @@ resetButton.addEventListener("click", function() {
 });
 
 easyBtn.addEventListener("click", function() {
+	numSquares = 3;
 	title.style.backgroundColor = "steelblue";
 	messageText.textContent = "";
 	resetButton.textContent = "New Colors";
@@ -72,7 +74,7 @@ easyBtn.addEventListener("click", function() {
 	medBtn.classList.remove("selected");
 	hardBtn.classList.remove("selected");
 
-	colors = generateRandomColors(3);
+	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
 	rgbText.textContent = pickedColor;
 
@@ -102,6 +104,7 @@ easyBtn.addEventListener("click", function() {
 });
 
 medBtn.addEventListener("click", function() {
+	numSquares = 6;
 	title.style.backgroundColor = "steelblue";
 	messageText.textContent = "";
 	resetButton.textContent = "New Colors";
@@ -110,7 +113,7 @@ medBtn.addEventListener("click", function() {
 	easyBtn.classList.remove("selected");
 	hardBtn.classList.remove("selected");
 
-	colors = generateRandomColors(6);
+	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
 	rgbText.textContent = pickedColor;
 
@@ -140,6 +143,7 @@ medBtn.addEventListener("click", function() {
 });
 
 hardBtn.addEventListener("click", function() {
+	numSquares = 9;
 	title.style.backgroundColor = "steelblue";
 	messageText.textContent = "";
 	resetButton.textContent = "New Colors";
@@ -148,7 +152,7 @@ hardBtn.addEventListener("click", function() {
 	easyBtn.classList.remove("selected");
 	medBtn.classList.remove("selected");
 
-	colors = generateRandomColors(9);
+	colors = generateRandomColors(numSquares);
 	pickedColor = pickColor();
 	rgbText.textContent = pickedColor;
 
